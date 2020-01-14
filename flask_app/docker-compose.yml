@@ -1,0 +1,6 @@
+version: '3'
+services: 
+    web:
+        build: . # find the Dockerfile out of which you will build in the same dir
+        ports:
+            - "5000:5000" # expose port 5000
