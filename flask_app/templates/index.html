@@ -5,7 +5,34 @@
     <link rel="stylesheet" href="/static/style.css">
   </head>
   <body>
-    <h1 class="welcome" id="welcome">Testing Format WKRPT Site</h1>
+    <h1 class="welcome" id="welcome">Format my WKRPT</h1>
+    <p class="sales-pitch">Do you have 5 minutes left to submit your WKRPT? <br>
+    Worry no more! </p>
+    <p class="instructions">All you gotta do is upload a file that has you cotent here:</p>
+    <ul>
+      <li>No cover page needed</li>
+      <li>No page numberig needed</li>
+      <li>No image numbering (just write /label before the image)</li>
+      <li>No table numbering (just write /label before the table)</li>
+      <li>No title formatig (just put a star {**} before a heading, two stars {**} before heading 2, etc)</li>
+      <li>No need to make references (put the link where you find the info in square brackets in text [www.link.com]</li>
+    </ul>
+    <p class="instructions">Once you get the file back, open it and add your name and project name to the cover page!</p>
+    <form id="wkrptForm">
+      <input type="text" name="fullName" placeholder="John Doe">
+      <input type="text" name="subject" placeholder="Subject Name">
+      <select name="department" id="department">
+        <option value="" disabled selected>Select your program</option>
+        <option value="mech">ME / MTE</option>
+        <option value="ece">EE / CE</option>
+        <option value="sys">SYDE / BME</option>
+        <option value="civil">CIVE / ENVE / GEOE</option>
+        <option value="manage">MGTE</option>
+        <option value="chemical">CHE / NE</option>
+      </select>
+      <input type="file" name="reportDoc" required>
+      <input type="submit" value="Submit" id="submitButton">
+    </form>
     <script src="/static/frontEnd.js" charset="utf-8"></script>
   </body>
 </html>
