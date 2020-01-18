@@ -17,6 +17,16 @@ form.onsubmit = function(e) {
     if(subject == "") {
         subject = "Change me to subject";
     }
+
+    street = form.street.value;
+    if(street == "") {
+        street = "123 Street St";
+    }
+
+    postal = form.postal.value;
+    if(postal == "") {
+        postal = "City, Province, P0S 1A1";
+    }
     
     reportFile = form.reportDoc.value;
     if(isNotWordFile(reportFile)){
@@ -28,8 +38,12 @@ form.onsubmit = function(e) {
             studentName,
             department,
             subject,
+            street,
+            postal,
             reportFile
         }
+
+        console.log(data)
     
         fetch("/format", {
             method: "POST",

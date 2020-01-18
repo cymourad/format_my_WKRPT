@@ -5,10 +5,9 @@
     <link rel="stylesheet" href="/static/style.css">
   </head>
   <body>
-    <h1 class="welcome" id="welcome">Format my WKRPT</h1>
-    <p class="sales-pitch">Do you have 5 minutes left to submit your WKRPT? <br>
-    Worry no more! </p>
-    <p class="instructions">All you gotta do is upload a file that has you cotent here:</p>
+    <div class="header">
+      <h1 class="welcome" id="welcome">Format my WKRPT</h1>
+    </div>
     <ul>
       <li>No cover page needed</li>
       <li>No page numberig needed</li>
@@ -21,6 +20,10 @@
     <form id="wkrptForm">
       <input type="text" name="fullName" placeholder="John Doe">
       <input type="text" name="subject" placeholder="Subject Name">
+      <br>
+      <input type="text" name="street" placeholder="123 Street St" />
+      <input type="text" name="postal" placeholder="City, Province, P0S 1A1" />
+      <br>
       <select name="department" id="department">
         <option value="" disabled selected>Select your program</option>
         <option value="mech">ME / MTE</option>
@@ -30,9 +33,13 @@
         <option value="manage">MGTE</option>
         <option value="chemical">CHE / NE</option>
       </select>
+      <br>
       <input type="file" name="reportDoc" required>
-      <input type="submit" value="Submit" id="submitButton">
+      <input type="submit" value="Submit" id="submitButton" class="submit-button">
     </form>
+    <div class="footer">
+      <p class="good-luck">Good luck!</p>
+    </div>
     <script src="/static/frontEnd.js" charset="utf-8"></script>
   </body>
 </html>

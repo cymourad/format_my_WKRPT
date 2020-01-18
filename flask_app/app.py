@@ -14,6 +14,7 @@ def index():
 def format():
     data = request.get_json()
     print(data)
+    # TODO call the format function and pass data into it
     return 200
 
 # run the application
